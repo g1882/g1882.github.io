@@ -11,7 +11,7 @@ let markers = [ //formát 0 lat, 1 lon, 2 id
     [49.402134, 15.573264, 2],
     [49.395420, 15.591023, 3]
 ];
-const points_url = 'http://zelda.sci.muni.cz:8080/geoserver/ows?service=wfs&version=1.0.0&request=GetFeature&srsName=urn:ogc:def:crs:EPSG::4326&typenames=webovka:goth_jihlava_lokality&outputFormat=json&format_options=CHARSET:UTF-8';
+const points_url = 'https://zelda.sci.muni.cz/geoserver/ows?service=wfs&version=1.0.0&request=GetFeature&srsName=urn:ogc:def:crs:EPSG::4326&typenames=webovka:goth_jihlava_lokality&outputFormat=json&format_options=CHARSET:UTF-8';
 let json_markers;
 
 fetch(points_url)
