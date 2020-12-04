@@ -11,16 +11,17 @@ let markers = [ //formát 0 lat, 1 lon, 2 id
     [49.402134, 15.573264, 2],
     [49.395420, 15.591023, 3]
 ];
-const url = 'http://zelda.sci.muni.cz:8080/geoserver/ows?service=wfs&version=1.0.0&request=GetFeature&srsName=urn:ogc:def:crs:EPSG::4326&typenames=webovka:goth_jihlava_lokality&outputFormat=csv&format_options=CHARSET:UTF-8'
-
+const points_url = 'http://zelda.sci.muni.cz:8080/geoserver/ows?service=wfs&version=1.0.0&request=GetFeature&srsName=urn:ogc:def:crs:EPSG::4326&typenames=webovka:goth_jihlava_lokality&outputFormat=json&format_options=CHARSET:UTF-8';
+let json_markers;
 const req = new XMLHttpRequest();
-req.open("GET", url);
+req.onreadystatechange = function(){
+    if (this.readyState == 4 && this.status == 200) {
+        json_markers = JSON.parse(this.responseText);
+      }
+};
+req.open("GET", points_url, true);
 req.send();
-let text = req.responseText;
-console.log(text);
-
-
-
+console.log(json_markers);
 
 
 
@@ -84,7 +85,8 @@ function selected_marker(e) {
     if (is_o_img.hasChildNodes()) {
         is_o_img.innerHTML = "";
     }
-    document.getElementById('title').innerHTML = e.sourceTarget.options.title;    //zobrazí titulek, popisek
+    document.getElementById('title').innerHTML = e.sourceTarget.options.title;//zobrazí titulek, popisek
+    const alt = document.getElementById('title').innerHTML;
     document.getElementById('description').innerHTML = e.sourceTarget.options.descr;
 
     if (e.sourceTarget.options.descr_source != '') {
@@ -100,6 +102,7 @@ function selected_marker(e) {
         if (e.sourceTarget.options.idm === images[x][0]){
             let img = document.createElement('img');
             img.src = images[x][2];
+            img.alt = alt;
             img.id = images[x][8];
             img.des = images[x][6];
             img.n_o = images[x][1];
@@ -134,6 +137,7 @@ function selected_marker(e) {
                     
                     large_image = document.createElement('img');
                     large_image.src = this.src;
+                    large_image.alt = alt;
                     large_image.id = 'large_img';
                     document.getElementById('lf').appendChild(large_image);
 

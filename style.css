@@ -73,16 +73,16 @@
 #description {
     max-width: 90%;
 }
-#title {
+h3 {
     font-weight: bold;
     font-size: large;
+    margin-bottom: 3%;
 }
 #photos {
     background-color: #ebf4fc;
     display: flex;
     max-height: 60vh;
     overflow: auto;
-    max-width: 35vw;
 }
 #photos img {
     display: grid;
@@ -100,7 +100,7 @@
 .container {
     background-color:  #ebf4fc;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 3fr minmax(0, 2fr);
     grid-template-rows: auto auto;
     grid-template-areas:
         "header header"
