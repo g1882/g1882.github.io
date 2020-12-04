@@ -1,0 +1,118 @@
+.top {
+    grid-area: header;
+    background-color: #132f47;
+    overflow: hidden;
+}
+.map {
+    position: relative;
+    grid-area: main;
+    background-color:  #ebf4fc;
+}
+#mapid {
+    height: 70vh;
+    width: 60vw;
+    border-style: solid;
+    border-color: #132f47;
+    z-index: 1;
+}
+#mapid .leaflet-popup-content-wrapper {
+    background: #132f47;
+    color: #ebf4fc;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0;
+    text-align: center;
+}
+#mapid .leaflet-popup-content {
+    padding: 0;
+    margin: 7px;
+}
+#mapid .leaflet-popup-tip {
+    background-color: transparent;
+    box-shadow: none;
+}
+#lf {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    z-index: 2;
+    position: fixed;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 8px;
+    border-color: #24282c;
+    background-color: #24282c;
+}
+#large_img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    order: 1;
+}
+#img_d {
+    order: 2;
+    color: #ebf4fc;
+}
+#exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+.object_focus {
+    grid-area: sidebar;
+    background-color: #ebf4fc;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    text-align: justify;
+}
+#description {
+    max-width: 90%;
+}
+#title {
+    font-weight: bold;
+    font-size: large;
+}
+#photos {
+    background-color: #ebf4fc;
+    display: flex;
+    max-height: 60vh;
+    overflow: auto;
+    max-width: 35vw;
+}
+#photos img {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-columns: auto;
+    max-width: 30vw;
+    max-height: 30vh;
+    padding: 1px;
+}
+#photos img:hover {
+    border-style: solid;
+    border-width: 2px;
+    border-color:#586877;
+}
+.container {
+    background-color:  #ebf4fc;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "header header"
+        "main sidebar";
+}
+.container div {
+    padding: 10px;
+}
+* {
+    font-family: Tahoma, Geneva, sans-serif;
+    margin: 0;
+}
+#cities {
+    visibility: hidden;
+}

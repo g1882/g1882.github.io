@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2560"
+   height="100"
+   viewBox="0 0 677.33333 26.458333"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="sj_logo_2560.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="55.54195"
+       y="5.261869"
+       width="270.69391"
+       height="42.094952"
+       id="rect844" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#132f47"
+     bordercolor="#666666"
+     borderopacity="1"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.8101934"
+     inkscape:cx="208.93652"
+     inkscape:cy="29.590571"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     units="px"
+     width="150mm"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1358"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="false"
+     showborder="true"
+     borderlayer="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid859" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       id="text842"
+       style="font-style:normal;font-weight:normal;font-size:11.9504px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect844);fill:#000000;fill-opacity:1;stroke:none;"
+       transform="matrix(1.4762244,0,0,1.3600805,-48.44676,-3.5044014)"><tspan
+         x="55.541016"
+         y="16.164431"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.9504px;font-family:'Bookman Old Style';-inkscape-font-specification:'Bookman Old Style';fill:#ebf4fc;fill-opacity:1">Stará Jihlava</tspan></tspan></text>
+    <path
+       id="rect848"
+       style="fill:#ebf4fc;fill-opacity:1;stroke:#e2ecf5;stroke-width:0.196438;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 23.111185,4.469219 c -0.06624,0 -0.119099,0.076711 -0.119099,0.1722006 V 7.8730854 H 22.795132 L 22.512909,7.158646 a 0.23727154,0.24765943 0 0 0 0.116318,-0.2128323 0.23727154,0.24765943 0 0 0 -0.237271,-0.2476595 0.23727154,0.24765943 0 0 0 -0.05793,0.00774 L 22.037899,5.9551758 a 0.21294174,0.2521925 0 0 0 0.174246,-0.2476595 0.21294174,0.2521925 0 0 0 -0.21271,-0.2520127 0.21294174,0.2521925 0 0 0 -0.213173,0.2520127 0.21294174,0.2521925 0 0 0 0.185832,0.2500781 l -0.308639,0.7545875 a 0.23727155,0.24765945 0 0 0 -0.07832,-0.014027 0.23727155,0.24765945 0 0 0 -0.237272,0.2476594 0.23727155,0.24765945 0 0 0 0.129758,0.2205717 l -0.256738,0.6283384 -0.05422,0.078361 h -0.481954 c -0.03011,0 -0.05422,-0.034959 -0.05422,-0.078361 V 5.8743962 h -0.186758 v 0.5330484 c 0,0.026044 -0.01484,0.047403 -0.0329,0.047403 h -0.328565 c -0.01806,0 -0.03244,-0.021361 -0.03244,-0.047403 V 5.8743962 h -0.231248 v 0.5330484 c 0,0.026044 -0.01438,0.047403 -0.03244,0.047403 h -0.328566 c -0.01806,0 -0.03244,-0.021361 -0.03244,-0.047403 V 5.8743962 H 19.22076 c -0.04648,0 -0.08435,0.053674 -0.08435,0.1209275 V 21.9147 c 0,0.06725 0.03786,0.121411 0.08435,0.121411 h 2.297642 c 0.22846,-2.330065 1.283989,-4.017222 2.513596,-4.01721 1.229606,-1.2e-5 2.285599,1.687145 2.514058,4.01721 h 2.195689 c 0.04648,0 0.08388,-0.05415 0.08388,-0.121411 V 5.9953237 c 0,-0.067255 -0.03739,-0.1209275 -0.08388,-0.1209275 h -0.19232 v 0.5330484 c 0,0.026044 -0.01483,0.047403 -0.0329,0.047403 h -0.328093 c -0.01805,0 -0.03244,-0.021361 -0.03244,-0.047403 V 5.8743962 H 27.95857 v 0.5330484 c 0,0.026044 -0.01438,0.047403 -0.03244,0.047403 h -0.328567 c -0.01805,0 -0.03244,-0.021361 -0.03244,-0.047403 V 5.8743962 h -0.245614 v 1.9203281 c 0,0.043404 -0.02457,0.078361 -0.05468,0.078361 h -0.481498 c -0.03011,0 -0.05422,-0.034959 -0.05422,-0.078361 -0.14566,-0.3535311 -0.205372,-0.4952282 -0.265999,-0.6389806 a 0.23727155,0.24765945 0 0 0 0.112147,-0.20993 0.23727155,0.24765945 0 0 0 -0.237271,-0.2476595 0.23727155,0.24765945 0 0 0 -0.06581,0.00968 c -0.01277,-0.025553 -0.01129,-0.02003 -0.300761,-0.7502338 a 0.21294174,0.2521925 0 0 0 0.186758,-0.2500776 0.21294174,0.2521925 0 0 0 -0.213173,-0.2520127 0.21294174,0.2521925 0 0 0 -0.21271,0.2520127 0.21294174,0.2521925 0 0 0 0.183051,0.2495942 l -0.300296,0.7574897 a 0.23727154,0.24765943 0 0 0 -0.08435,-0.016446 0.23727154,0.24765943 0 0 0 -0.237271,0.2476595 0.23727154,0.24765943 0 0 0 0.140416,0.2258923 L 25.156263,7.8730854 H 24.959308 V 4.6414196 c 0,-0.095489 -0.05286,-0.1722006 -0.119099,-0.1722006 h -0.274345 v 0.4890306 c 0,0.043404 -0.02412,0.078361 -0.05422,0.078361 h -0.285 c -0.0301,0 -0.05422,-0.034956 -0.05422,-0.078361 V 4.469219 h -0.393445 v 0.4890306 c 0,0.043404 -0.02412,0.078361 -0.05422,0.078361 h -0.285003 c -0.03011,0 -0.05422,-0.034956 -0.05422,-0.078361 V 4.469219 Z m 1.05243,5.878042 c 0.0029,0 0.0058,-2.4e-5 0.0088,0 0.0021,-1.1e-5 0.0045,-1.1e-5 0.0065,0 0.370808,-2.3e-5 0.67106,0.380516 0.671034,0.849879 2.6e-5,0.46936 -0.300692,0.849416 -0.671497,0.849395 -0.370808,2.1e-5 -0.671062,-0.380035 -0.671034,-0.849395 -1.18e-4,-0.462052 0.29113,-0.849879 0.656204,-0.849879 z" />
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Göth Webová kartografie">
+        <title>Göth WK1</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="top">
+                <picture>
+                    <source media="(max-width: 576px)"
+                            srcset="sj_logo_576.svg">
+                    <source media="(max-width: 768px)"
+                            srcset="sj_logo_768.svg">
+                    <source media="(max-width: 992px)"
+                            srcset="sj_logo_992.svg">
+                    <source media="(max-width: 1200px)"
+                            srcset="sj_logo_1200.svg">
+                    <img src="sj_logo_2560.svg">
+                  </picture>
+            </div>
+            <div class="map" id="main">
+                <div id="mapid"></div>
+            </div>
+            <div class="object_focus">
+                <div id="title">Pro zobrazení obrázků vyberte objekt na mapě</div>
+                <div id="description"></div>
+                <div class="miniatures" id="photos"></div>
+            </div>
+        </div>
+        <ul id="cities">
+        <script src="sc.js"></script>
+    </body>
+</html>
