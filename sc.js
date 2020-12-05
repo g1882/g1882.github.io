@@ -14,7 +14,7 @@ let markers = [ //formát 0 lat, 1 lon, 2 id
 const points_url = 'https://zelda.sci.muni.cz/geoserver/ows?service=wfs&version=1.0.0&request=GetFeature&srsName=urn:ogc:def:crs:EPSG::4326&typenames=webovka:goth_jihlava_lokality&outputFormat=json&format_options=CHARSET:UTF-8';
 let json_markers;
 let json_images;
-fetch(points_url)
+fetch('locations.json') // sem potom points_url
     .then(response => response.json())
     .then(data => json_markers = data);
 console.log(json_markers);
