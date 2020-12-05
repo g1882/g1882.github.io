@@ -13,13 +13,18 @@ let markers = [ //formát 0 lat, 1 lon, 2 id
 ];
 const points_url = 'https://zelda.sci.muni.cz/geoserver/ows?service=wfs&version=1.0.0&request=GetFeature&srsName=urn:ogc:def:crs:EPSG::4326&typenames=webovka:goth_jihlava_lokality&outputFormat=json&format_options=CHARSET:UTF-8';
 let json_markers;
-
+let json_images;
 fetch(points_url)
     .then(response => response.json())
     .then(data => json_markers = data);
-
 console.log(json_markers);
 
+fetch('images.json')
+    .then(response => response.json())
+    .then(data => json_images = data);
+console.log(json_images)
+
+L.geoJSON(json_markers).addTo(mymap);
 
 
 let images = [ // formát 0 id markeru, 1 'název' u aktuální fotky jinak 'o', 2 adresa souboru, 3 časové určení (0=chybí), 4 přesnost časového určení (0=chybí, 1=přibližné, 2=přesné), 5 zdroj obrázku, 6 popisek, 7 zdroj popisku, 8 id obrázku

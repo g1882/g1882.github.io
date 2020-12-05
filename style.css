@@ -9,7 +9,7 @@
     background-color:  #ebf4fc;
 }
 #mapid {
-    height: 70vh;
+    height: 82vh;
     width: 60vw;
     border-style: solid;
     border-color: #132f47;
@@ -112,7 +112,4 @@ h3 {
 * {
     font-family: Tahoma, Geneva, sans-serif;
     margin: 0;
-}
-#cities {
-    visibility: hidden;
 }
