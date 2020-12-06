@@ -12,7 +12,9 @@
     height: 82vh;
     width: 60vw;
     border-style: solid;
+    border-width: 5px;
     border-color: #132f47;
+    border-radius: 10px;
     z-index: 1;
 }
 #mapid .leaflet-popup-content-wrapper {
@@ -42,7 +44,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-style: solid;
-    border-width: 8px;
+    border-radius: 10px;
+    border-width: 10px;
     border-color: #24282c;
     background-color: #24282c;
 }
@@ -69,9 +72,11 @@
     word-wrap: break-word;
     hyphens: auto;
     text-align: justify;
+    text-justify: distribute;
+    text-align-last: left;
 }
 #description {
-    max-width: 90%;
+    max-width: 94%;
 }
 h3 {
     font-weight: bold;
@@ -81,21 +86,23 @@ h3 {
 #photos {
     background-color: #ebf4fc;
     display: flex;
-    max-height: 60vh;
     overflow: auto;
+    padding-top: 10px;
+    padding-left: 1px;
 }
 #photos img {
     display: grid;
     grid-template-columns: auto;
-    grid-template-columns: auto;
-    max-width: 30vw;
+    max-width: 20vw;
     max-height: 30vh;
+    width: auto;
+    height: auto;
     padding: 1px;
+    border: 2px solid transparent;
 }
 #photos img:hover {
-    border-style: solid;
-    border-width: 2px;
-    border-color:#586877;
+    border: 2px solid #586877;
+    border-radius: 2px;
 }
 .container {
     background-color:  #ebf4fc;

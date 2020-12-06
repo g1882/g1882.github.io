@@ -73,6 +73,8 @@ function selected(e) {
     const alt = document.getElementById('title').innerHTML;
     for (let i=0; i<j_images.length; i++) {
         if (et.properties['fid'] == j_images[i].obj_id) {
+            const w = 0;
+            const h = 0;
             let img = document.createElement('img');
             img.src = j_images[i].src;
             img.alt = alt;
@@ -111,7 +113,7 @@ function selected(e) {
 
                     let exit = document.createElement('button');
                     exit.id = 'exit';
-                    exit.innerHTML = 'X';
+                    exit.innerHTML = '&times';
                     exit.onclick = function () { //zavře zvětšený obrázek
                         let l_img = document.getElementById('large_img');
                         let p = document.getElementById('lf');
