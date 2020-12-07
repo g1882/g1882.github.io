@@ -1,6 +1,28 @@
 document.getElementById('home').onclick = function () {
     location.href = 'index.html';
 };
+function Validation(){
+    if (document.getElementById('contact').value === ""){
+        alert('Vyplntě vaší emailovou adresu');
+        return false;
+    }
+    else if (document.getElementById('up').files.length === 0) {
+        alert('Nahrajte obrázek.');
+        return false;
+    }
+    else if ((document.getElementById('object').value === "") && (b1b2)){
+        alert('Vyberte objekt na mapě.');
+        return false;
+    }
+    else if (document.getElementById('message').value === ""){
+        alert('Popište obrázky.');
+        return false;
+    }
+    else {
+        return true;
+    }
+};
+
 let mymap = L.map('mapid').setView([49.3961, 15.59124], 14);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGVmb2UxODgyIiwiYSI6ImNrZ2p6NHc1NTI2czMyeXMxcHlic2Uzb20ifQ.ooeZvawU4JmVuO_rQXrG0w', {
     maxZoom: 20,

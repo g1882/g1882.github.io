@@ -31,23 +31,24 @@
                     id="form"
                     action="https://formspree.io/f/xeqproay"
                     method="POST"
-                    enctype="multipart/form-data">
+                    enctype="multipart/form-data"
+                    onsubmit="return Validation()">
                 <label id="email">
                     Vaše emailová adresa:
                     <br>
-                    <input type="text" name="_replyto">
+                    <input id="contact" type="text" name="_replyto">
                 </label>
                 <div id="button_clicked">
                     <label id="location_name">
                         Název objektu nebo lokality:
                         <br>
                         <textarea name="name" id="loc_name"></textarea>
-                        <h4 id='loc_selected'></h4>
+                        <h4 id="loc_selected"></h4>
                     </label>
                 </div>
                 <label id="upload">
                     Vložit obrázky:
-                    <input type="file" name="nahrát obrázky" accept="image/png, image/jpeg, image/jpg" multiple>
+                    <input id="up" type="file" name="nahrát obrázky" accept="image/png, image/jpeg, image/jpg" multiple>
                     <br>
                 </label>
                 <label id="description">
