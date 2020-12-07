@@ -1,3 +1,6 @@
+document.getElementById('addImages').onclick = function () {
+    location.href = "submit.html";
+};
 let mymap = L.map('mapid').setView([49.3961, 15.59124], 14);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGVmb2UxODgyIiwiYSI6ImNrZ2p6NHc1NTI2czMyeXMxcHlic2Uzb20ifQ.ooeZvawU4JmVuO_rQXrG0w', {
     maxZoom: 20,

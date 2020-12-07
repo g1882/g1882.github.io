@@ -1,7 +1,20 @@
 .top {
+    position: relative;
     grid-area: header;
     background-color: #132f47;
     overflow: hidden;
+}
+#addImages {
+    position: absolute;
+    line-height: 1.5;
+    top: 38%;
+    right: 5%;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #24282c;
+    border-style: solid;
+    font-size: larger;
+    background-color: #ebf4fc;;
 }
 .map {
     position: relative;

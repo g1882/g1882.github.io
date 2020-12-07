@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="poslat obrázky">
+        <meta name="keywords" content="Jihlava, staré fotky, historie">
+        <meta name="author" content="JG">
+        <title>Stará Jihlava - poslat obrázky</title>
+        <link rel="stylesheet" type="text/css" href="form_style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="top">
+                <img src="sj_logo_2560.svg" alt="header with title and logo">
+                <button id="home">Prohlížení obrázků</button>
+            </div>
+            <div class="map" id="main">
+                <div id="mapid"></div>
+            </div>
+            <div class="form">
+                <h4>Vyberte jednu z možností:</h3>
+                <div id='buttons'>
+                    <button id="on_map" type="button">Lokalita již je v mapě vyznačena</button>
+                    <button id="not_on_map" type="button">Chci do mapy přidat novou lokalitu</button>
+                </div>
+                <h4 id="pick">Vyberte na mapě objekt, ke kterému chcete nahrát obrázky</h4>
+                <form
+                    id="form"
+                    action="https://formspree.io/f/xeqproay"
+                    method="POST"
+                    enctype="multipart/form-data">
+                <label id="email">
+                    Vaše emailová adresa:
+                    <br>
+                    <input type="text" name="_replyto">
+                </label>
+                <div id="button_clicked">
+                    <label id="location_name">
+                        Název objektu nebo lokality:
+                        <br>
+                        <textarea name="name" id="loc_name"></textarea>
+                        <h4 id='loc_selected'></h4>
+                    </label>
+                </div>
+                <label id="upload">
+                    Vložit obrázky:
+                    <input type="file" name="nahrát obrázky" accept="image/png, image/jpeg, image/jpg" multiple>
+                    <br>
+                </label>
+                <label id="description">
+                    Popis obrázků:
+                    <p>Co na obrázku vidíme? Kdy byl obrázek pořízen? Kdo je autorem?<br>Co nejlépe popiště každý obrázek.</p>
+                    <textarea id="message" name="message"></textarea>
+                    <textarea id="object" name="xy/name"></textarea>
+                    <br>
+                </label>
+                <button type="submit">Poslat obrázky k schválení</button>
+                <p>Vaše obrázky budou na stránku přidány v nejbližší době po schválení administrátora.</p>
+                </form>
+            </div>
+        </div>
+        <script src="form.js"></script>
+    </body>
+</html>
