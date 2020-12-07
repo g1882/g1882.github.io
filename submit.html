@@ -34,12 +34,14 @@
                     enctype="multipart/form-data"
                     onsubmit="return Validation()">
                 <label id="email">
+                    <hr width="100%">
                     Vaše emailová adresa:
                     <br>
                     <input id="contact" type="text" name="_replyto">
                 </label>
                 <div id="button_clicked">
                     <label id="location_name">
+                        <hr width="100%">
                         Název objektu nebo lokality:
                         <br>
                         <textarea name="name" id="loc_name"></textarea>
@@ -47,18 +49,21 @@
                     </label>
                 </div>
                 <label id="upload">
+                    <hr width="100%">
                     Vložit obrázky:
                     <input id="up" type="file" name="nahrát obrázky" accept="image/png, image/jpeg, image/jpg" multiple>
                     <br>
                 </label>
                 <label id="description">
+                    <hr width="100%">
                     Popis obrázků:
                     <p>Co na obrázku vidíme? Kdy byl obrázek pořízen? Kdo je autorem?<br>Co nejlépe popiště každý obrázek.</p>
                     <textarea id="message" name="message"></textarea>
                     <textarea id="object" name="xy/name"></textarea>
                     <br>
                 </label>
-                <button type="submit">Poslat obrázky k schválení</button>
+                <hr width="100%">
+                <button id="send" type="submit">Poslat obrázky k schválení</button>
                 <p>Vaše obrázky budou na stránku přidány v nejbližší době po schválení administrátora.</p>
                 </form>
             </div>
