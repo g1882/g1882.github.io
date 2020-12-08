@@ -14,7 +14,8 @@
     border-color: #24282c;
     border-style: solid;
     font-size: larger;
-    background-color: #ebf4fc;;
+    background-color: #ebf4fc;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 .map {
     position: relative;
@@ -30,7 +31,7 @@
     visibility: collapse;
     flex-direction: column;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 #buttons {
     padding: 10px 10px 10px 0px;
@@ -85,6 +86,9 @@ button:hover {
     width: 80%;
     height: 100px;
 }
+#contact {
+    width: 45%;
+}
 .container {
     background-color:  #ebf4fc;
     display: grid;
@@ -97,8 +101,9 @@ button:hover {
 .container div {
     padding: 10px;
 }
-p {
+p, h3 {
     color: grey;
+    font-weight:normal;
 }
 * {
     font-family: Tahoma, Geneva, sans-serif;

@@ -68,6 +68,7 @@ fetch('locations.json') // sem potom url z geoserveru
 });
 function selected(e){
     if (b1b2){
+        document.getElementById('pick').style.color = 'grey'; 
         let s = document.getElementById('loc_selected');
         s.innerText = e.sourceTarget.feature.properties['nazev'];
         s.style.backgroundColor = 'white';
