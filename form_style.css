@@ -105,6 +105,9 @@ p, h3 {
     color: grey;
     font-weight:normal;
 }
+hr {
+    width: 100%;
+}
 * {
     font-family: Tahoma, Geneva, sans-serif;
     margin: 0;

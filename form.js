@@ -22,7 +22,6 @@ function Validation(){
         return true;
     }
 };
-
 let mymap = L.map('mapid').setView([49.3961, 15.59124], 14);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGVmb2UxODgyIiwiYSI6ImNrZ2p6NHc1NTI2czMyeXMxcHlic2Uzb20ifQ.ooeZvawU4JmVuO_rQXrG0w', {
     maxZoom: 20,
@@ -102,4 +101,3 @@ b2.addEventListener('click', function(){
     document.getElementById('mapid').style.cursor = 'crosshair';
     mymap.on('click', addMarker);
 });
-//zkontrolovat jestli je stisknutý tlačítko a vyplněnej formulář při odeslání

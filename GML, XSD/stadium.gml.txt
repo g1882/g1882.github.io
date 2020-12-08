@@ -1,0 +1,56 @@
+<FeatureCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml" xsi:schemaLocation="schema schema.xsd">
+    <gml:boundedBy>
+        <gml:Box>
+            <gml:coord>
+                <gml:X>49.41699</gml:X>
+                <gml:Y>15.59490</gml:Y>
+            </gml:coord>
+            <gml:coord>
+                <gml:X>49.41546</gml:X>
+                <gml:Y>15.59268</gml:Y>
+            </gml:coord>
+        </gml:Box>
+    </gml:boundedBy>
+    <gml:featureMember>
+        <pitch fid="0">
+            <geometryProperty>
+                <gml:Polygon srsName="http://www.opengis.net/def/crs/EPSG/8.5/4326">
+                    <gml:LinearRing>
+                        <gml:coordinates>49.10363,15.59382 49.41684,15.59472 49.41594,15.59444 49.41605,15.59354</gml:coordinates>
+                    </gml:LinearRing>
+                </gml:Polygon>
+            </geometryProperty>
+            <sport>football</sport>
+            <surface>grass</surface>
+        </pitch>
+    </gml:featureMember>
+    <gml:featureMember>
+        <track fid="1">
+            <geometryProperty>
+                <gml:LineString srsName="http://www.opengis.net/def/crs/EPSG/8.5/4326">
+                    <gml:coordinates>49.419696,15.59378 49.41606,15.59350 49.41603,15.59353 49.41591,15.59442 49.41594,15.59447 49.41684,15.59475 49.41688,15.59473 49.41698,15.59383</gml:coordinates>
+                </gml:LineString>
+            </geometryProperty>
+            <surface>dirt</surface>
+        </track>
+    </gml:featureMember>
+    <gml:featureMember>
+        <entrance fid="2">
+            <geometryProperty>
+                <gml:MultiPoint srsName="http://www.opengis.net/def/crs/EPSG/8.5/4326">
+                    <gml:pointMember>
+                        <gml:Point>
+                            <gml:coordinates>49.41706,15,59449</gml:coordinates>
+                        </gml:Point>
+                    </gml:pointMember>
+                </gml:MultiPoint>
+            </geometryProperty>
+            <fee>20</fee>
+            <open>
+                <hours>Monday-Friday 8:00-17:00</hours>
+                <hours>Saturday-Sunday 10:00-17:00</hours>
+                <opened>false</opened> 
+            </open>
+        </entrance>
+    </gml:featureMember>
+</FeatureCollection>

@@ -135,7 +135,3 @@ function selected(e) {
         };
     };
 };
-//css miniatury obrázků: mouseover
-//zúžit mapu
-//záložka se zdroji
-//nativní aspekt obrázků

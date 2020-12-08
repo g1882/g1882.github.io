@@ -22,7 +22,7 @@
             </div>
             <div class="form">
                 <h3>NAHRÁVÁNÍ OBRÁZKŮ</h3>
-                <h4>Vyberte jednu z možností:</h3>
+                <h4>Vyberte jednu z možností:</h4>
                 <div id='buttons'>
                     <button id="on_map" type="button">Lokalita již je v mapě vyznačena</button>
                     <button id="not_on_map" type="button">Chci do mapy přidat novou lokalitu</button>
@@ -34,36 +34,36 @@
                     method="POST"
                     enctype="multipart/form-data"
                     onsubmit="return Validation()">
+                <hr>
                 <label id="email">
-                    <hr width="100%">
                     Vaše emailová adresa:
                     <br>
                     <input id="contact" type="text" name="_replyto">
                 </label>
+                <hr>
                 <div id="button_clicked">
                     <label id="location_name">
-                        <hr width="100%">
                         Název objektu nebo lokality:
                         <br>
                         <textarea name="name" id="loc_name"></textarea>
                         <h4 id="loc_selected"></h4>
                     </label>
                 </div>
+                <hr>
                 <label id="upload">
-                    <hr width="100%">
                     Vložit obrázky:
                     <input id="up" type="file" name="nahrát obrázky" accept="image/png, image/jpeg, image/jpg" multiple>
                     <br>
                 </label>
+                <hr>
                 <label id="description">
-                    <hr width="100%">
                     Popis obrázků:
                     <p>Co na obrázku vidíme? Kdy byl obrázek pořízen? Kdo je autorem?<br>Co nejlépe popiště každý obrázek.</p>
                     <textarea id="message" name="message"></textarea>
-                    <textarea id="object" name="xy/name"></textarea>
                     <br>
                 </label>
-                <hr width="100%">
+                <textarea id="object" name="xy/name"></textarea>
+                <hr>
                 <button id="send" type="submit">Poslat obrázky k schválení</button>
                 <p>Vaše obrázky budou na stránku přidány v nejbližší době po schválení administrátora.</p>
                 </form>
