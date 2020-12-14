@@ -1,7 +1,7 @@
 document.getElementById('addImages').onclick = function () {
     location.href = "submit.html";
 };
-let mymap = L.map('mapid').setView([49.3961, 15.59124], 14);
+const mymap = L.map('mapid').setView([49.3961, 15.59124], 14);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGVmb2UxODgyIiwiYSI6ImNrZ2p6NHc1NTI2czMyeXMxcHlic2Uzb20ifQ.ooeZvawU4JmVuO_rQXrG0w', {
     maxZoom: 20,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -10,11 +10,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1,
 }).addTo(mymap);
 
-const points_url = 'https://zelda.sci.muni.cz/geoserver/ows?service=wfs&version=1.0.0&request=GetFeature&srsName=urn:ogc:def:crs:EPSG::4326&typenames=webovka:goth_jihlava_lokality&outputFormat=json&format_options=CHARSET:UTF-8';
+const points_url = 'https://zelda.sci.muni.cz/geoserver/webovka/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=webovka:goth_jihlava_lokality&SRSName=urn:ogc:def:crs:EPSG::4326&outputFormat=json';
 let j_markers;
 let j_images;
 
-let focusIcon = L.icon({
+const focusIcon = L.icon({
     iconUrl : 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-gold.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
@@ -23,7 +23,6 @@ let focusIcon = L.icon({
     shadowSize: [41, 41]
 });
 let defaultIcon;
-
 function onEachFeature(feature, layer) {
     layer
         .bindPopup(feature.properties['nazev'])
@@ -36,11 +35,11 @@ function onEachFeature(feature, layer) {
             layer.setIcon(defaultIcon);})
         .on('click', selected)
 };
-fetch('locations.json') // sem potom points_url
+fetch(points_url)
     .then(response => response.json())
     .then(output => {
         j_markers = output;
-        //console.log(j_markers); //j_markers.features[i].properties['fid']) - fid lokality
+        console.log(j_markers)
         let markers = new L.geoJSON(j_markers, {
             onEachFeature: onEachFeature
         }).addTo(mymap);
@@ -48,10 +47,9 @@ fetch('locations.json') // sem potom points_url
 fetch('images.json')
     .then(response => response.json())
     .then(output => {
-        j_images = output; //j_images[4].obj_id - fid lokality
+        j_images = output;
     });
 let l_img_open = false;
-
 function selected(e) {
     const et = e.sourceTarget.feature;
     let displayed = document.getElementById('photos'); //smaže zobrazené fotky

@@ -22,7 +22,7 @@ function Validation(){
         return true;
     }
 };
-let mymap = L.map('mapid').setView([49.3961, 15.59124], 14);
+const mymap = L.map('mapid').setView([49.3961, 15.59124], 14);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGVmb2UxODgyIiwiYSI6ImNrZ2p6NHc1NTI2czMyeXMxcHlic2Uzb20ifQ.ooeZvawU4JmVuO_rQXrG0w', {
     maxZoom: 20,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -31,7 +31,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1,
 }).addTo(mymap);
 let j_markers;
-let focusIcon = L.icon({
+const focusIcon = L.icon({
     iconUrl : 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-gold.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
@@ -57,7 +57,8 @@ function onEachFeature(feature, layer) {
             )
         .on('click', selected)
 };
-fetch('locations.json') // sem potom url z geoserveru
+const points_url = 'https://zelda.sci.muni.cz/geoserver/webovka/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=webovka:goth_jihlava_lokality&srsName=urn:ogc:def:crs:EPSG::4326&outputFormat=json';
+fetch(points_url)
     .then(response => response.json())
     .then(output => {
         j_markers = output;
@@ -84,8 +85,7 @@ function addMarker(e){
     newMarker.setIcon(focusIcon);
     document.getElementById('object').innerText = e.latlng;
 }
-//vybrat existující lokalitu
-let b1 = document.getElementById('on_map');
+let b1 = document.getElementById('on_map'); //vybrat existující lokalitu
 b1.addEventListener('click', function(){
     b1b2 = true;
     b2.disabled = true;
@@ -93,8 +93,7 @@ b1.addEventListener('click', function(){
     document.getElementById('form').style.visibility = 'visible';
     document.getElementById('loc_name').remove();
 });
-//přidat novou lokalitu
-let b2 = document.getElementById('not_on_map');
+let b2 = document.getElementById('not_on_map'); //přidat novou lokalitu
 b2.addEventListener('click', function(){
     b1.disabled = true;
     document.getElementById('form').style.visibility = 'visible';
