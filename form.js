@@ -1,7 +1,7 @@
 document.getElementById('home').onclick = function () {
     location.href = 'index.html';
 };
-function Validation(){
+function Validation(){ //validace při odeslání formuláře
     if (document.getElementById('contact').value === ""){
         alert('Vyplntě vaší emailovou adresu');
         return false;
@@ -30,6 +30,21 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     tileSize: 512,
     zoomOffset: -1,
 }).addTo(mymap);
+
+const loc_cluster = L.markerClusterGroup({
+    maxClusterRadius: 80,
+    iconCreateFunction: function (cluster) {
+        const locs = cluster.getAllChildMarkers();
+        let html = '<div class="circle">' + locs.length + '</div>';
+        return L.divIcon({ 
+            html: html, 
+            className: 'mycluster',
+            iconSize: L.point(20, 20),
+        });
+    },
+    showCoverageOnHover: false
+}).addTo(mymap);
+
 let j_markers;
 const focusIcon = L.icon({
     iconUrl : 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-gold.png',
@@ -45,15 +60,13 @@ function onEachFeature(feature, layer) {
     layer
         .bindPopup(feature.properties['nazev'])
         .on('mouseover', function(){
-            if (b1b2){
-                this.openPopup();
-                defaultIcon = this.options.icon; 
-                layer.setIcon(focusIcon);}
-            })
+            this.openPopup();
+            defaultIcon = this.options.icon; 
+            layer.setIcon(focusIcon);}
+            )
         .on('mouseout', function(){
-            if (b1b2){
-                this.closePopup();
-                layer.setIcon(defaultIcon);}}
+            this.closePopup();
+            layer.setIcon(defaultIcon);}
             )
         .on('click', selected)
 };
@@ -62,10 +75,11 @@ fetch(points_url)
     .then(response => response.json())
     .then(output => {
         j_markers = output;
-        let markers = new L.geoJSON(j_markers, {
+        let markers = L.geoJSON(j_markers, {
             onEachFeature: onEachFeature
-        }).addTo(mymap);
-});
+        })
+        loc_cluster.addLayer(markers);
+    });
 function selected(e){
     if (b1b2){
         document.getElementById('pick').style.color = 'grey'; 

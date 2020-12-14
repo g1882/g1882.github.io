@@ -10,6 +10,20 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1,
 }).addTo(mymap);
 
+const loc_cluster = L.markerClusterGroup({
+    maxClusterRadius: 80,
+    iconCreateFunction: function (cluster) {
+        const locs = cluster.getAllChildMarkers();
+        let html = '<div class="circle">' + locs.length + '</div>';
+        return L.divIcon({ 
+            html: html, 
+            className: 'mycluster',
+            iconSize: L.point(20, 20),
+        });
+    },
+    showCoverageOnHover: false
+}).addTo(mymap);
+
 const points_url = 'https://zelda.sci.muni.cz/geoserver/webovka/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=webovka:goth_jihlava_lokality&SRSName=urn:ogc:def:crs:EPSG::4326&outputFormat=json';
 let j_markers;
 let j_images;
@@ -39,10 +53,10 @@ fetch(points_url)
     .then(response => response.json())
     .then(output => {
         j_markers = output;
-        console.log(j_markers)
-        let markers = new L.geoJSON(j_markers, {
+        let markers = L.geoJSON(j_markers, {
             onEachFeature: onEachFeature
-        }).addTo(mymap);
+        })
+        loc_cluster.addLayer(markers);
     });
 fetch('images.json')
     .then(response => response.json())

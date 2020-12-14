@@ -47,6 +47,27 @@
     background-color: transparent;
     box-shadow: none;
 }
+.mycluster {
+    text-align: center;
+    line-height: 20px;
+    background: #1288f0;
+    border-radius: 50%;
+    box-shadow: 4px 4px 3px grey;
+    -moz-box-shadow: 4px 4px 3px grey;
+    -webkit-box-shadow: 4px 4px 3px grey;
+}
+.circle {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    text-shadow: 2px 2px rgb(85, 84, 84);
+}
 #lf {
     display: flex;
     flex-direction: column;
